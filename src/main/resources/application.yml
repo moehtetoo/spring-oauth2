@@ -1,0 +1,19 @@
+debug: true
+
+logging:
+  path: /var/log
+  level:
+    org.springframework: error
+    com.moehtet: debug
+    org.mybatis: error
+    
+datasource:
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/spring_oauth2
+  username: postgres
+  password: postgres
+  
+mybatis:
+  type-aliases-package: com.moehtet.model
+  mapper-locations:
+  - classpath*:**/mappers/*.xml
